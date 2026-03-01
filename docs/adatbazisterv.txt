@@ -1,0 +1,144 @@
+Users (Felhasználók) tábla
+
+    id
+
+    name
+
+    email
+
+    password
+
+    role (super_admin / admin / user)
+
+    created_at
+
+    updated_at
+
+Kapcsolatok:
+
+    hasMany stock_movements
+
+
+
+1. products (Termékek) – FŐ TÁBLA
+
+Ez lesz az „alkalmazás fő táblája”
+→ fontos, mert normál user csak ezt láthatja.
+
+Mezők:
+
+    id
+
+    name
+
+    description
+
+    category_id (FK)
+
+    supplier_id (FK)
+
+    quantity
+
+    unit (kg, db, liter)
+
+    expiration_date
+
+    created_at
+
+    updated_at
+
+Kapcsolatok:
+
+    belongsTo category
+
+    belongsTo supplier
+
+
+
+2. categories (Kategóriák)
+
+Pl:
+
+    Zöldség
+
+    Gyümölcs
+
+    Tejtermék
+
+    Hús
+
+Mezők:
+
+    id
+
+    name
+
+    description
+
+    created_at
+
+    updated_at
+
+Kapcsolat:
+
+    hasMany products
+
+
+
+3. suppliers (Beszállítók)
+Mezők:
+
+    id
+
+    name
+
+    email
+
+    phone
+
+    address
+
+    created_at
+
+    updated_at
+
+Kapcsolat:
+
+    hasMany products
+
+
+
+OPCIONÁLIS:
+
+4. stock_movements (Készletmozgások)
+
+Mezők:
+
+    id
+
+    product_id (FK)
+
+    type (IN / OUT)
+
+    quantity
+
+    user_id (ki végezte)
+
+    created_at
+
+    updated_at
+
+Ez lehetővé teszi:
+
+    logolni a bevételezést
+
+    logolni a kiadást
+
+    admin ne törölhessen, csak super admin
+
+    normál user csak product listát lássa
+
+Kapcsolatok:
+    belongsTo product
+
+    belongsTo user

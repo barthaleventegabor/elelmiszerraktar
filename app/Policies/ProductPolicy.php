@@ -29,25 +29,34 @@ class ProductPolicy
     /**
      * Determine whether the user can create models.
      */
-    public function create(User $user): bool
+    public function create(User $user): Response
     {
-        return false;
+        if($user->isAdmin() || $user->isSuperAdmin()) {
+            return Response::allow();
+        }
+        return Response::deny("Nincs jogosultságod termék létrehozásához.");
     }
 
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Product $product): bool
+    public function update(User $user, Product $product): Response
     {
-        return false;
+        if($user->isAdmin() || $user->isSuperAdmin()) {
+            return Response::allow();
+        }
+        return Response::deny("Nincs jogosultságod termék szerkesztéséhez.");
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Product $product): bool
+    public function delete(User $user, Product $product): Response
     {
-        return false;
+        if($user->isSuperAdmin()) {
+            return Response::allow();
+        }
+        return Response::deny("Nincs jogosultságod termék törléséhez.");
     }
 
     /**

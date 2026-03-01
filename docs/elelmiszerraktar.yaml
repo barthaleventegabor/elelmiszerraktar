@@ -1,0 +1,288 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: elelmiszerraktar
+meta:
+  id: wrk_4c07b600ee0c45f9b8d39119f1b6b854
+  created: 1772126605663
+  modified: 1772126605663
+  description: ""
+collection:
+  - name: Products
+    meta:
+      id: fld_7857b1469a3b416297cfe7a7472fb4f5
+      created: 1772130609163
+      modified: 1772130613437
+      sortKey: -1772130609363
+      description: ""
+    children:
+      - url: localhost:8000/api/products
+        name: getProducts
+        meta:
+          id: req_9848ffbf5b734fe6aa6f77ca72acee6d
+          created: 1772126613655
+          modified: 1772387152843
+          isPrivate: false
+          description: ""
+          sortKey: -1772130622611
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 2|ss5scnLFlMGdnjfanreAqKXediy4l0Mn8yXpLtO2692b1dd5
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/product/3
+        name: getProduct
+        meta:
+          id: req_c37af09d71114764b9bfc75ee581b7f7
+          created: 1772387916916
+          modified: 1772387939024
+          isPrivate: false
+          description: ""
+          sortKey: -1771955179765.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 2|ss5scnLFlMGdnjfanreAqKXediy4l0Mn8yXpLtO2692b1dd5
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/createproduct
+        name: createProduct
+        meta:
+          id: req_5b61b9424bf843e3bf937827bdfff32f
+          created: 1772390202330
+          modified: 1772391127636
+          isPrivate: false
+          description: ""
+          sortKey: -1771867458342.75
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Teszt termékfgsasdfddfsd",
+            	"description": "Ez egy teszt termék leírásadsd.",
+            	"category_name": "Gyümölcs",
+            	"supplier_name": "Só Kft.",
+            	"quantity": 10.5,
+            	"unit": "kg",
+            	"expiration_date": "2026-12-31"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 6|b76N0HkxR5iPGqK9A7ERsTTqGMzG2RAD8pjwqH9ue69581bb
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/updateproduct/16
+        name: updateProduct
+        meta:
+          id: req_b76e17f0227e442bbdf059970ad3d535
+          created: 1772391458667
+          modified: 1772391555458
+          isPrivate: false
+          description: ""
+          sortKey: -1771823597631.375
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Geciszar",
+            	"description": "Ez egy teszt termék leírásadsd.",
+            	"category_name": "Gyümölcs",
+            	"supplier_name": "Só Kft.",
+            	"quantity": 10.5,
+            	"unit": "kg",
+            	"expiration_date": "2026-12-31"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 4|MvLAIZW4kWCJB0I5DI1Ib9GN1mvqDe2NSN42fNo3322f2b90
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/deleteproduct/16
+        name: deleteProduct
+        meta:
+          id: req_38280171c56d49c3adfd47d44433a04a
+          created: 1772391659798
+          modified: 1772391718857
+          isPrivate: false
+          description: ""
+          sortKey: -1771801667275.6875
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 4|MvLAIZW4kWCJB0I5DI1Ib9GN1mvqDe2NSN42fNo3322f2b90
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: User
+    meta:
+      id: fld_cde6353ef0274eb4839b2f4697796a52
+      created: 1772130632723
+      modified: 1772130632723
+      sortKey: -1772130632723
+      description: ""
+    children:
+      - url: localhost:8000/api/login
+        name: login
+        meta:
+          id: req_b50f60e1183140d5b98743872fadf07f
+          created: 1772130650345
+          modified: 1772390815978
+          isPrivate: false
+          description: ""
+          sortKey: -1772130650345
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "email": "admin@vmi.lan",
+              "password": "Aa123?"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/logout
+        name: logout
+        meta:
+          id: req_fe5975cba1454af58f179cfac54d1a0c
+          created: 1772294948286
+          modified: 1772297172396
+          isPrivate: false
+          description: ""
+          sortKey: -1772294948286
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 3|TgcujqlvqanPieQEDPFtCsPKSEtmujng67B8R5DR6f2f4e63
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/register
+        name: register
+        meta:
+          id: req_64088e71d9c14bc396f087f9dd626579
+          created: 1772385595042
+          modified: 1772386812214
+          isPrivate: false
+          description: ""
+          sortKey: -1772130636478
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "tesztuser2",
+            	"email": "bgeegegeg@gmail.com",
+            	"password": "123456Aa!",
+            	"password_confirmation": "123456Aa!"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_6c8977dfb514d6cef6a0dffa1a8414e514520982
+    created: 1772126605669
+    modified: 1772126605669
+environments:
+  name: Base Environment
+  meta:
+    id: env_6c8977dfb514d6cef6a0dffa1a8414e514520982
+    created: 1772126605667
+    modified: 1772126605667
+    isPrivate: false

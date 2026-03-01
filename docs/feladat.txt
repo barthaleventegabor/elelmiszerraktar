@@ -1,0 +1,34 @@
+Éves Projekt feladat
+Backend alkalmazás fejlesztése
+Készítsen backend alkalmazást az ön által választott témakörben, az alábbi szempontok szerint.
+1) Adatkezelés:
+a) Készítsen adatbázis tervet, legalább 3 adattáblában tárolja a szükséges adatokat (users tábla kivételével).
+b) Az adatbázis táblák kezelése ORM alkalmazásával történjen.
+c) A kontrollerekben csak a vezérlést valósítsa meg, az adatműveleteket szervezze szervizekbe és traitekbe.
+d) Valósítsa meg minden táblára a CRUD műveleteket.
+e) A kimeneten a kapcsolt táblák tárolt rekordjai legyenek megjelenítve.
+f) A kapcsolt táblák,„,id" mezőjét ne jelenítse meg.
+2) Felhasználókezelés:
+a) A projekt indulásakor legalább egy szuper adminisztrátor és egy adminisztrátor jogosultságú felhasználó jöjjön létre.
+b) A normál felhasználók tudjanak regisztrálni a rendszerbe, a regisztráció során jöjjön létre a felhasználó profilja.
+c) Regisztráció során a jelszónak a következő feltételeknek kell megfelelnie:
+d) Legalább 6 karakter hosszú legyen.
+e) Tartalmazzon legalább egy nagybetűt és egy kisbetűt.
+f) Tartalmazzon legalább egy számot.
+g) Tartalmazzon legalább egy különleges karaktert.
+h) Egy felhasználónévvel és email címmel csak egyszer lehessen regisztrálni.
+i) A validálás során adathiba esetén az üzenetek legyenek magyar nyelvűek.
+j) A regisztráció befejezése után küldjön üdvözlő üzenetet a felhasználónak emailben, amely tartalmazza a felhasználónevét és a jelszavát.
+k) A felhasználók tudjanak bejelentkezni, email és jelszó párossal.
+I) Hibás adatokkal történő bejelentkezési kísérlet esetén adjon saját hibaüzenetet.
+3) Jogosultságkezelés:
+a) Kizárólag a szuper adminisztrátor tudjon adminisztrátor jogosultságot adni más felhasználónak és csak ő tudja elvenni ezt a szerepkört.
+b) A szuper adminisztrátor minden műveletet tudjon elvégezni az adatbázis bármely tábláján. c) Az adminisztrátornak az adatbázis egyik tábláján sem legyen jogosultsága a törlés művelethez.
+d) A normál felhasználó csak az alkalmazás fő tábláját kérdezhesse le, a kapcsolt táblákat nem láthatja. A lekérdezésen kívül más műveletet nem végezhet.
+e) A normál felhasználó a profilok közül csak a saját profilját nézheti meg, ezt szerkesztheti, a felhasználónév kivételével.
+f) A jogosultságokat szabályozza policy osztályok használatával.
+4) Log:
+a) Minden fontos műveletet jegyezzen fel log fájlba (frissítés, törlés, törlési, bejelentkezési kísérlet, stb.).
+b) Ezek a feljegyzések kerüljenek külön saját állományokba.
+5) Készítsen mentést az adatbázisról, a projektben hozzon létre „Adatbázis" névvel egy könyvtárat és ebben helyezze el az sql állományt és az adatbázis tervet.png kiterjesztéssel.
+Az elkészült projektből távolítsa el a vendor könyvtárat, tömörítse ZIP formátumra és töltse fel a classroomban.
