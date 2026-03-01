@@ -7,13 +7,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Traits\ResponseTrait;
 use App\Http\Requests\LoginRequest;
-
+use App\Services\RegisterService;
+use App\Http\Requests\RegisterRequest;
 
 
 
 class UserController extends Controller
 {
     use ResponseTrait;
+    protected RegisterService $registerService;
+
+    public function __construct(RegisterService $registerService){
+        $this->registerService = $registerService;
+    }
 
     public function login(LoginRequest $request){
         $validated = $request->validated();
@@ -27,6 +33,16 @@ class UserController extends Controller
         }else{
             return $this->sendError('Hibás email vagy jelszó', [], 401);
         }
+    }
+
+    public function register(RegisterRequest $request){
+        $validated = $request->validated();
+        return $this->registerService->create($validated);
+    }
+    
+    public function logout(Request $request){
+        $request->user()->currentAccessToken()->delete();
+        return $this->sendResponse([], 'Sikeres kijelentkezés');
     }
 
 
