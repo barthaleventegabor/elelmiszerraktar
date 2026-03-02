@@ -7,25 +7,24 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use App\Models\Product;
 use App\Traits\ResponseTrait;
-use App\Http\Resources\ProductResource;
 use App\Services\ProductService;
 use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
     use ResponseTrait;
-    
+    public function __construct( protected ProductService $productService ){}
 
     public function getProducts()
     {
-        $products = Product::with("category", "supplier")->get();
-        return $this->sendResponse(ProductResource::collection($products), "Termékek lekérve.");
+        $products = $this->productService->getProducts();
+        return $this->sendResponse($products, "Termékek lekérve.");
     }
 
     public function getProduct( Product $product )
     {
-        $product = Product::with("category", "supplier")->find( $product->id );
-        return $this->sendResponse( new ProductResource( $product ), "Termék lekérve." );
+        $product = $this->productService->getProduct($product);
+        return $this->sendResponse($product, "Termék lekérve.");
     }
 
     public function create(ProductRequest $request, ProductService $productService){
@@ -33,7 +32,8 @@ class ProductController extends Controller
 
         $validated = $request->validated();
 
-        return $productService->create($validated);
+        $product = $productService->create($validated);
+        return $this->sendResponse($product, "Termék létrehozva.");
     }
 
     public function update(ProductRequest $request, Product $product, ProductService $productService){
@@ -41,13 +41,14 @@ class ProductController extends Controller
 
         $validated = $request->validated();
 
-        return $productService->update($product, $validated);
+        $product = $productService->update($product, $validated);
+        return $this->sendResponse($product, "Termék frissítve.");
     }
 
     public function delete(Product $product, ProductService $productService){
         Gate::authorize("delete", $product);
 
-        return $productService->delete($product);
+        return $this->sendResponse($productService->delete($product), "Termék törölve.");
     }
 
     

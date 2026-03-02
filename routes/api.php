@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\ProductController;
 use App\Http\Controllers\api\UserController;
+use App\Http\Controllers\api\CategoryController;
+use App\Http\Controllers\api\SupplierController;
 
 // User
 Route::post( "/login", [ UserController::class, "login" ]);
@@ -17,6 +19,20 @@ Route::middleware([ "auth:sanctum" ])->group( function() {
     Route::post('/createproduct', [ProductController::class, 'create']);
     Route::put('/updateproduct/{product}', [ProductController::class, 'update']);
     Route::delete('/deleteproduct/{product}', [ProductController::class, 'delete']);
+
+    // Category
+    Route::get('/categories', [CategoryController::class, 'getCategories']);
+    Route::get('/category/{category}', [CategoryController::class, 'getCategory']);
+    Route::post('/createcategory', [CategoryController::class, 'create']);
+    Route::put('/updatecategory/{category}', [CategoryController::class, 'update']);
+    Route::delete('/deletecategory/{category}', [CategoryController::class, 'delete']);
+
+    // Supplier
+    Route::get('/suppliers', [SupplierController::class, 'getSuppliers']);
+    Route::get('/supplier/{supplier}', [SupplierController::class, 'getSupplier']);
+    Route::post('/createsupplier', [SupplierController::class, 'create']);
+    Route::put('/updatesupplier/{supplier}', [SupplierController::class, 'update']);
+    Route::delete('/deletesupplier/{supplier}', [SupplierController::class, 'delete']);
 
     // User
     Route::post('/logout', [UserController::class, 'logout']);

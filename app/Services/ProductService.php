@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Product;
 use App\Traits\ResponseTrait;
+use App\Http\Resources\ProductResource;
 
 class ProductService
 {
@@ -17,7 +18,17 @@ class ProductService
         $this->supplierService = $supplierService;
     }
 
-    public function create($data){
+    public function getProducts(){
+        $products = Product::with("category", "supplier")->get();
+        return (ProductResource::collection($products)) ;
+    }
+
+    public function getProduct(Product $product){
+        $product = Product::with("category", "supplier")->find($product->id);
+        return (new ProductResource($product)) ;
+    }
+
+    public function create($data): ProductResource {
         $product = new Product();
 
         $product->name = $data["name"];
@@ -30,11 +41,11 @@ class ProductService
 
         $product->save();
         
-        return $this->sendResponse($product, "Termék létrehozva.");
+        return (new ProductResource( $product ));
         
     }
 
-    public function update(Product $product, $data){
+    public function update(Product $product, $data): ProductResource {
         $product->name = $data["name"];
         $product->description = $data["description"];
         $product->category_id = $this->categoryService->getCategoryId($data["category_name"]);
@@ -45,12 +56,12 @@ class ProductService
 
         $product->save();
         
-        return $this->sendResponse($product, "Termék frissítve.");
+        return (new ProductResource( $product ));
     }
 
-    public function delete(Product $product){
+    public function delete(Product $product): bool {
         $product->delete();
-        return $this->sendResponse(null, "Termék törölve.");
+        return true;
     }
     
 

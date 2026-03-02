@@ -48,11 +48,6 @@ class User extends Authenticatable
         ];
     }
 
-    public function stockMovements()
-    {
-        return $this->hasMany(StockMovement::class);
-    }
-
     public function isAdmin(): bool
     {
         return $this->role === 'admin';

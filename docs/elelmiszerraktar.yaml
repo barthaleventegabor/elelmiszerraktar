@@ -20,7 +20,7 @@ collection:
         meta:
           id: req_9848ffbf5b734fe6aa6f77ca72acee6d
           created: 1772126613655
-          modified: 1772387152843
+          modified: 1772472494516
           isPrivate: false
           description: ""
           sortKey: -1772130622611
@@ -32,7 +32,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 2|ss5scnLFlMGdnjfanreAqKXediy4l0Mn8yXpLtO2692b1dd5
+          token: 2|ntqwa1i8s4iblt7DWrNCLygzgKrIA0218dB6RvJv909a7af3
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -41,12 +41,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: localhost:8000/api/product/3
+      - url: localhost:8000/api/product/19
         name: getProduct
         meta:
           id: req_c37af09d71114764b9bfc75ee581b7f7
           created: 1772387916916
-          modified: 1772387939024
+          modified: 1772476627314
           isPrivate: false
           description: ""
           sortKey: -1771955179765.5
@@ -58,7 +58,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 2|ss5scnLFlMGdnjfanreAqKXediy4l0Mn8yXpLtO2692b1dd5
+          token: 1|c1T0pslZ4U7Cf6TEgdQIyrlN3ARhzs6YHuyoo6wY05fd75e7
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -72,7 +72,7 @@ collection:
         meta:
           id: req_5b61b9424bf843e3bf937827bdfff32f
           created: 1772390202330
-          modified: 1772391127636
+          modified: 1772474325262
           isPrivate: false
           description: ""
           sortKey: -1771867458342.75
@@ -81,7 +81,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"name": "Teszt termékfgsasdfddfsd",
+            	"name": "Teszt termédsadskfgsasdfddfsdddsdfd",
             	"description": "Ez egy teszt termék leírásadsd.",
             	"category_name": "Gyümölcs",
             	"supplier_name": "Só Kft.",
@@ -98,7 +98,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 6|b76N0HkxR5iPGqK9A7ERsTTqGMzG2RAD8pjwqH9ue69581bb
+          token: 1|c1T0pslZ4U7Cf6TEgdQIyrlN3ARhzs6YHuyoo6wY05fd75e7
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -107,12 +107,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: localhost:8000/api/updateproduct/16
+      - url: localhost:8000/api/updateproduct/17
         name: updateProduct
         meta:
           id: req_b76e17f0227e442bbdf059970ad3d535
           created: 1772391458667
-          modified: 1772391555458
+          modified: 1772474877178
           isPrivate: false
           description: ""
           sortKey: -1771823597631.375
@@ -121,7 +121,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"name": "Geciszar",
+            	"name": "Geciszarrfsfsfrrr",
             	"description": "Ez egy teszt termék leírásadsd.",
             	"category_name": "Gyümölcs",
             	"supplier_name": "Só Kft.",
@@ -138,7 +138,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 4|MvLAIZW4kWCJB0I5DI1Ib9GN1mvqDe2NSN42fNo3322f2b90
+          token: 1|c1T0pslZ4U7Cf6TEgdQIyrlN3ARhzs6YHuyoo6wY05fd75e7
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -147,12 +147,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: localhost:8000/api/deleteproduct/16
+      - url: localhost:8000/api/deleteproduct/19
         name: deleteProduct
         meta:
           id: req_38280171c56d49c3adfd47d44433a04a
           created: 1772391659798
-          modified: 1772391718857
+          modified: 1772476667389
           isPrivate: false
           description: ""
           sortKey: -1771801667275.6875
@@ -164,7 +164,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 4|MvLAIZW4kWCJB0I5DI1Ib9GN1mvqDe2NSN42fNo3322f2b90
+          token: 3|OPKWtVXgPBHzthd8gO043t6q6n1GtxNGgTeY52zK46c60213
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -186,7 +186,7 @@ collection:
         meta:
           id: req_b50f60e1183140d5b98743872fadf07f
           created: 1772130650345
-          modified: 1772390815978
+          modified: 1772472426152
           isPrivate: false
           description: ""
           sortKey: -1772130650345
@@ -195,7 +195,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-              "email": "admin@vmi.lan",
+              "email": "super@vmi.lan",
               "password": "Aa123?"
             }
         headers:
@@ -244,7 +244,7 @@ collection:
         meta:
           id: req_64088e71d9c14bc396f087f9dd626579
           created: 1772385595042
-          modified: 1772386812214
+          modified: 1772472452876
           isPrivate: false
           description: ""
           sortKey: -1772130636478
@@ -253,7 +253,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"name": "tesztuser2",
+            	"name": "tesztuser",
             	"email": "bgeegegeg@gmail.com",
             	"password": "123456Aa!",
             	"password_confirmation": "123456Aa!"
@@ -265,6 +265,296 @@ collection:
             value: insomnia/12.3.1
             description: ""
             disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Categories
+    meta:
+      id: fld_4768ab3da4f34c9092278392fdca6f38
+      created: 1772475556123
+      modified: 1772475556123
+      sortKey: -1772475556123
+      description: ""
+    children:
+      - url: localhost:8000/api/categories
+        name: categories
+        meta:
+          id: req_20d201a1c8f846b2a31c0fde60f3bef9
+          created: 1772475569196
+          modified: 1772475855460
+          isPrivate: false
+          description: ""
+          sortKey: -1772475569196
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 3|OPKWtVXgPBHzthd8gO043t6q6n1GtxNGgTeY52zK46c60213
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/createcategory
+        name: createcategory
+        meta:
+          id: req_dbb842bb10db4233bc96e22a796c5015
+          created: 1772475883294
+          modified: 1772476549511
+          isPrivate: false
+          description: ""
+          sortKey: -1772385258741
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "Tejtermékektttt",
+              "description": "Mindenféle tejtermék"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 1|c1T0pslZ4U7Cf6TEgdQIyrlN3ARhzs6YHuyoo6wY05fd75e7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/updatecategory/12
+        name: updatecategory
+        meta:
+          id: req_b0589a8e22bb4b78942ee580c5709fa6
+          created: 1772476125407
+          modified: 1772476405723
+          isPrivate: false
+          description: ""
+          sortKey: -1772340103513.5
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "Tejtermékek - frissítve",
+              "description": "Frissített leírás"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 1|c1T0pslZ4U7Cf6TEgdQIyrlN3ARhzs6YHuyoo6wY05fd75e7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/deletecategory/13
+        name: deletecategory
+        meta:
+          id: req_56d5be41633b4f2fb3d9b42b3d92223c
+          created: 1772476230660
+          modified: 1772476561365
+          isPrivate: false
+          description: ""
+          sortKey: -1772430413968.5
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 3|OPKWtVXgPBHzthd8gO043t6q6n1GtxNGgTeY52zK46c60213
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Suppliers
+    meta:
+      id: fld_38dab7f20bff4a6d8079c1f53ba9ff54
+      created: 1772477904342
+      modified: 1772477904342
+      sortKey: -1772477904342
+      description: ""
+    children:
+      - url: localhost:8000/api/suppliers
+        name: suppliers
+        meta:
+          id: req_3946b2c0ed5a4270ac3d3ba71f48c10b
+          created: 1772477912137
+          modified: 1772478001435
+          isPrivate: false
+          description: ""
+          sortKey: -1772477912137
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 3|OPKWtVXgPBHzthd8gO043t6q6n1GtxNGgTeY52zK46c60213
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/createsupplier
+        name: createsupplier
+        meta:
+          id: req_34ed7244ce864f61876b4aaed9977f95
+          created: 1772478007859
+          modified: 1772478175939
+          isPrivate: false
+          description: ""
+          sortKey: -1772478007859
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "Teszt Beszállító",
+              "email": "teszt@beszaldlito.hu",
+              "phone": "+36 30 123 4567",
+              "address": "Budapest, Fő utca 1."
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 3|OPKWtVXgPBHzthd8gO043t6q6n1GtxNGgTeY52zK46c60213
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/updatesupplier/6
+        name: updatesupplier
+        meta:
+          id: req_c4f2d705ea3149f6bf0ab99852abc0b1
+          created: 1772478205901
+          modified: 1772478289037
+          isPrivate: false
+          description: ""
+          sortKey: -1772477959998
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "Gecitelep kftpina.",
+              "email": "teszt@beszaldlito.hu",
+              "phone": "+36 30 123 4567",
+              "address": "Budapest, Fő utca 1."
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 3|OPKWtVXgPBHzthd8gO043t6q6n1GtxNGgTeY52zK46c60213
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/deletesupplier/6
+        name: deletesupplier
+        meta:
+          id: req_6efec41709024214a5471c260dc1858d
+          created: 1772478310061
+          modified: 1772478367890
+          isPrivate: false
+          description: ""
+          sortKey: -1772477936067.5
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 3|OPKWtVXgPBHzthd8gO043t6q6n1GtxNGgTeY52zK46c60213
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/supplier/5
+        name: supplier
+        meta:
+          id: req_5d286ecc59bf446b9df4afb3f145d0c6
+          created: 1772478382979
+          modified: 1772478413205
+          isPrivate: false
+          description: ""
+          sortKey: -1772476740666.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 3|OPKWtVXgPBHzthd8gO043t6q6n1GtxNGgTeY52zK46c60213
         settings:
           renderRequestBody: true
           encodeUrl: true
