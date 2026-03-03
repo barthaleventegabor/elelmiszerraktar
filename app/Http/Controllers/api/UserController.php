@@ -5,10 +5,14 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
+use App\Models\User;
 use App\Traits\ResponseTrait;
 use App\Http\Requests\LoginRequest;
 use App\Services\RegisterService;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\UpdateMyProfileRequest;
+use App\Services\UserService;
 
 
 
@@ -43,6 +47,43 @@ class UserController extends Controller
     public function logout(Request $request){
         $request->user()->currentAccessToken()->delete();
         return $this->sendResponse([], 'Sikeres kijelentkezés');
+    }
+
+    public function getProfile(Request $request)
+    {
+        $user = $request->user();
+        Gate::authorize('viewProfile', $user);
+
+        return $this->sendResponse($user->load('profile'), 'Profil lekérve.');
+    }
+
+    public function updateProfile(UpdateMyProfileRequest $request, UserService $userService)
+    {
+        $user = $request->user();
+        Gate::authorize('updateProfile', $user);
+
+        $validated = $request->validated();
+        $updatedUser = $userService->updateProfile($user, $validated);
+
+        return $this->sendResponse($updatedUser, 'Profil frissítve.');
+    }
+
+    public function makeAdmin(User $user, UserService $userService)
+    {
+        Gate::authorize('updateRole', $user);
+
+        $updated = $userService->updateRole($user, 'admin');
+
+        return $this->sendResponse($updated, 'Felhasználó admin jogosultságot kapott.');
+    }
+
+    public function removeAdmin(User $user, UserService $userService)
+    {
+        Gate::authorize('updateRole', $user);
+
+        $updated = $userService->updateRole($user, 'user');
+
+        return $this->sendResponse($updated, 'Admin jogosultság elvéve.');
     }
 
 

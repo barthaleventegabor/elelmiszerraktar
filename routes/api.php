@@ -6,6 +6,7 @@ use App\Http\Controllers\api\ProductController;
 use App\Http\Controllers\api\UserController;
 use App\Http\Controllers\api\CategoryController;
 use App\Http\Controllers\api\SupplierController;
+use App\Models\User;
 
 // User
 Route::post( "/login", [ UserController::class, "login" ]);
@@ -36,6 +37,13 @@ Route::middleware([ "auth:sanctum" ])->group( function() {
 
     // User
     Route::post('/logout', [UserController::class, 'logout']);
+
+    Route::get('/getprofile', [UserController::class, 'getProfile']);
+    Route::put('/updateprofile', [UserController::class, 'updateProfile']);
+
+    // Admin
+    Route::put('/makeadmin/{user}', [UserController::class, 'makeAdmin']);
+    Route::put('/removeadmin/{user}', [UserController::class, 'removeAdmin']);
 
     
 });
