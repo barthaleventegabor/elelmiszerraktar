@@ -31,6 +31,10 @@ class RegisterRequest extends FormRequest
                       ->mixedCase()
                       ->numbers()
                       ->symbols()],
+            "full_name" => [ "required", "max:70" ],
+            "city" => [  "max:50" ],
+            "address" => [  "max:100" ],
+            "phone" => [  "max:25" ]
         ];
     }
 
@@ -51,6 +55,13 @@ class RegisterRequest extends FormRequest
             "password.mixedCase" => "A jelszónak tartalmaznia kell kis- és nagybetűt is.",
             "password.numbers" => "A jelszónak tartalmaznia kell számot is.",
             "password.symbols" => "A jelszónak tartalmaznia kell speciális karaktert is.",
+
+
+            "full_name.max" => "A teljes név legfeljebb 70 karakter lehet.",
+            "full_name.required" => "A teljes név megadása kötelező.",
+            "city.max" => "A város neve legfeljebb 50 karakter lehet.",
+            "address.max" => "A cím legfeljebb 100 karakter lehet.",
+            "phone.max" => "A telefonszám legfeljebb 25 karakter lehet."
         ];
     }
 
