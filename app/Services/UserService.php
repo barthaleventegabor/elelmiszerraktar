@@ -23,4 +23,37 @@ class UserService
 
         return $targetUser;
     }
+
+    public function deleteUser(User $targetUser): bool
+    {
+        return $targetUser->delete();
+    }
+
+    public function setPasswordByAdmin(User $targetUser, string $password): User
+    {
+        $targetUser->password = bcrypt($password);
+        $targetUser->save();
+
+        return $targetUser;
+    }
+
+    public function setPassword(User $user, string $password): User
+    {
+        $user->password = bcrypt($password);
+        $user->save();
+
+        return $user;
+    }
+
+    public function updateProfileByAdmin(User $targetUser, array $data): User
+    {
+        $targetUser->profile()->updateOrCreate(
+            ['user_id' => $targetUser->id],
+            $data
+        );
+
+        return $targetUser->fresh('profile');
+    }
+
+    
 }

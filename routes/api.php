@@ -37,6 +37,7 @@ Route::middleware([ "auth:sanctum" ])->group( function() {
 
     // User
     Route::post('/logout', [UserController::class, 'logout']);
+    Route::put('/setpassword', [UserController::class, 'setPassword']);
 
     Route::get('/getprofile', [UserController::class, 'getProfile']);
     Route::put('/updateprofile', [UserController::class, 'updateProfile']);
@@ -44,6 +45,10 @@ Route::middleware([ "auth:sanctum" ])->group( function() {
     // Admin
     Route::put('/makeadmin/{user}', [UserController::class, 'makeAdmin']);
     Route::put('/removeadmin/{user}', [UserController::class, 'removeAdmin']);
+    Route::delete('/deleteuser/{user}', [UserController::class, 'deleteUser']);
+    Route::get('/users', [UserController::class, 'getProfiles']);
+    Route::put('/setpasswordbyadmin/{user}', [UserController::class, 'setPasswordByAdmin']);
+    Route::put('/updateprofilebyadmin/{user}', [UserController::class, 'updateProfileByAdmin']);
 
     
 });

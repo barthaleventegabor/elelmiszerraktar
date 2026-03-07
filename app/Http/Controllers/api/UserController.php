@@ -13,6 +13,7 @@ use App\Services\RegisterService;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\UpdateMyProfileRequest;
 use App\Services\UserService;
+use App\Http\Requests\SetPasswordRequest; 
 
 
 
@@ -68,6 +69,16 @@ class UserController extends Controller
         return $this->sendResponse($updatedUser, 'Profil frissítve.');
     }
 
+    public function updateProfileByAdmin(UpdateMyProfileRequest $request, User $user, UserService $userService)
+    {
+        Gate::authorize('updateProfileByAdmin', $user);
+
+        $validated = $request->validated();
+        $updatedUser = $userService->updateProfileByAdmin($user, $validated);
+
+        return $this->sendResponse($updatedUser, 'Profil frissítve.');
+    }
+
     public function makeAdmin(User $user, UserService $userService)
     {
         Gate::authorize('updateRole', $user);
@@ -86,5 +97,41 @@ class UserController extends Controller
         return $this->sendResponse($updated, 'Admin jogosultság elvéve.');
     }
 
+    public function deleteUser(User $user, UserService $userService)
+    {
+        Gate::authorize('delete', $user);
+        $deleted = $userService->deleteUser($user);
+
+        return $this->sendResponse($deleted, 'Felhasználó törölve.');
+    }
+
+    public function getProfiles()
+    {
+        Gate::authorize('viewProfiles', User::class);
+
+        $users = User::with('profile')->get();
+        return $this->sendResponse($users, 'Felhasználók lekérve.');
+    }
+
+    public function setPasswordByAdmin(SetPasswordRequest $request, User $user, UserService $userService)
+    {
+        Gate::authorize('setPasswordByAdmin', $user);
+
+        $validated = $request->validated();
+        $updated = $userService->setPasswordByAdmin($user, $validated['password']);
+
+        return $this->sendResponse($updated, 'Jelszó frissítve.');
+    }
+
+    public function setPassword(SetPasswordRequest $request, UserService $userService)
+    {
+        $user = $request->user();
+        Gate::authorize('setPassword', $user);
+
+        $validated = $request->validated();
+        $updated = $userService->setPassword($user, $validated['password']);
+
+        return $this->sendResponse($updated, 'Jelszó frissítve.');
+    }
 
 }
