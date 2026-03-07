@@ -118,6 +118,34 @@ return [
             'replace_placeholders' => true,
         ],
 
+        'audit_auth' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/auth.log'),
+            'level' => 'info',
+            'replace_placeholders' => true,
+        ],
+
+        'audit_create' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/create.log'),
+            'level' => 'info',
+            'replace_placeholders' => true,
+        ],
+
+        'audit_update' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/update.log'),
+            'level' => 'info',
+            'replace_placeholders' => true,
+        ],
+
+        'audit_delete' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/delete.log'),
+            'level' => 'info',
+            'replace_placeholders' => true,
+        ],
+
         'null' => [
             'driver' => 'monolog',
             'handler' => NullHandler::class,
