@@ -20,7 +20,7 @@ collection:
         meta:
           id: req_9848ffbf5b734fe6aa6f77ca72acee6d
           created: 1772126613655
-          modified: 1772472494516
+          modified: 1772885753407
           isPrivate: false
           description: ""
           sortKey: -1772130622611
@@ -32,7 +32,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 2|ntqwa1i8s4iblt7DWrNCLygzgKrIA0218dB6RvJv909a7af3
+          token: 2|b2IiJNXl6MNwjLgYJ3yXG5h0zAOiDmgRJ0oK2aTk1897143d
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -41,12 +41,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: localhost:8000/api/product/19
+      - url: localhost:8000/api/product/10
         name: getProduct
         meta:
           id: req_c37af09d71114764b9bfc75ee581b7f7
           created: 1772387916916
-          modified: 1772476627314
+          modified: 1772885639528
           isPrivate: false
           description: ""
           sortKey: -1771955179765.5
@@ -58,7 +58,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 1|c1T0pslZ4U7Cf6TEgdQIyrlN3ARhzs6YHuyoo6wY05fd75e7
+          token: 2|b2IiJNXl6MNwjLgYJ3yXG5h0zAOiDmgRJ0oK2aTk1897143d
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -72,7 +72,7 @@ collection:
         meta:
           id: req_5b61b9424bf843e3bf937827bdfff32f
           created: 1772390202330
-          modified: 1772474325262
+          modified: 1772885696045
           isPrivate: false
           description: ""
           sortKey: -1771867458342.75
@@ -98,7 +98,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 1|c1T0pslZ4U7Cf6TEgdQIyrlN3ARhzs6YHuyoo6wY05fd75e7
+          token: 2|b2IiJNXl6MNwjLgYJ3yXG5h0zAOiDmgRJ0oK2aTk1897143d
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -107,12 +107,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: localhost:8000/api/updateproduct/17
+      - url: localhost:8000/api/updateproduct/11
         name: updateProduct
         meta:
           id: req_b76e17f0227e442bbdf059970ad3d535
           created: 1772391458667
-          modified: 1772474877178
+          modified: 1772885788276
           isPrivate: false
           description: ""
           sortKey: -1771823597631.375
@@ -121,7 +121,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"name": "Geciszarrfsfsfrrr",
+            	"name": "nemtommm",
             	"description": "Ez egy teszt termék leírásadsd.",
             	"category_name": "Gyümölcs",
             	"supplier_name": "Só Kft.",
@@ -138,7 +138,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 1|c1T0pslZ4U7Cf6TEgdQIyrlN3ARhzs6YHuyoo6wY05fd75e7
+          token: 2|b2IiJNXl6MNwjLgYJ3yXG5h0zAOiDmgRJ0oK2aTk1897143d
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -147,12 +147,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: localhost:8000/api/deleteproduct/19
+      - url: localhost:8000/api/deleteproduct/11
         name: deleteProduct
         meta:
           id: req_38280171c56d49c3adfd47d44433a04a
           created: 1772391659798
-          modified: 1772476667389
+          modified: 1772885822813
           isPrivate: false
           description: ""
           sortKey: -1771801667275.6875
@@ -164,7 +164,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 3|OPKWtVXgPBHzthd8gO043t6q6n1GtxNGgTeY52zK46c60213
+          token: 3|M0sR1flpPPwn0cQu1WkarlbdN3mWpmhjkR7RVmFab9451056
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -186,7 +186,7 @@ collection:
         meta:
           id: req_b50f60e1183140d5b98743872fadf07f
           created: 1772130650345
-          modified: 1772472426152
+          modified: 1772885542941
           isPrivate: false
           description: ""
           sortKey: -1772130650345
@@ -196,7 +196,7 @@ collection:
           text: |-
             {
               "email": "super@vmi.lan",
-              "password": "Aa123?"
+            	"password" : "Aa123?"
             }
         headers:
           - name: Content-Type
@@ -218,7 +218,7 @@ collection:
         meta:
           id: req_fe5975cba1454af58f179cfac54d1a0c
           created: 1772294948286
-          modified: 1772297172396
+          modified: 1772885317961
           isPrivate: false
           description: ""
           sortKey: -1772294948286
@@ -230,7 +230,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 3|TgcujqlvqanPieQEDPFtCsPKSEtmujng67B8R5DR6f2f4e63
+          token: 2|HXPY2MZiJNAssGmYv0eDF6Cg1DwGPdVtElC54g17deb26e40
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -244,7 +244,7 @@ collection:
         meta:
           id: req_64088e71d9c14bc396f087f9dd626579
           created: 1772385595042
-          modified: 1772472452876
+          modified: 1773166787556
           isPrivate: false
           description: ""
           sortKey: -1772130636478
@@ -253,10 +253,14 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"name": "tesztuser",
-            	"email": "bgeegegeg@gmail.com",
-            	"password": "123456Aa!",
-            	"password_confirmation": "123456Aa!"
+              "name": "tesztuserr",
+              "email": "b.levi.levi@gmail.com",
+              "password": "Teszt123!",
+              "password_confirmation": "Teszt123!",
+              "full_name": "Teszt Felhasználó",
+              "city": "Budapest",
+              "address": "Teszt utca 1.",
+              "phone": "+36201234567"
             }
         headers:
           - name: Content-Type
@@ -265,6 +269,104 @@ collection:
             value: insomnia/12.3.1
             description: ""
             disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/updateprofile
+        name: updateprofile
+        meta:
+          id: req_04eec968879747f58c1268e301f62edf
+          created: 1772555876738
+          modified: 1772885379634
+          isPrivate: false
+          description: ""
+          sortKey: -1772130643411.5
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "full_name": "Új Teljes Név",
+              "city": "Szeged",
+              "address": "Fő utca 12.",
+              "phone": "+36301112233"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 4|PD5f16xoRc3Wmoam6JJLCutBUiToAIuO26aYRMVr750796ff
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/getprofile
+        name: getprofile
+        meta:
+          id: req_643e948eda274276986db7112bb3b440
+          created: 1772556147619
+          modified: 1772556168561
+          isPrivate: false
+          description: ""
+          sortKey: -1772212799315.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 1|AHsU8RB46jaZGFxtGcGx1Lsg0zcPZNDwCxWimJPvc4040e16
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/setpassword
+        name: setpassword
+        meta:
+          id: req_32d4a0b25ac849efbd1b36217e65b3ef
+          created: 1772883128361
+          modified: 1772883209892
+          isPrivate: false
+          description: ""
+          sortKey: -1772130639944.75
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "password": "ujJelszo123!",
+              "password_confirmation": "ujJelszo123!"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 4|jrChelUBaPY8geSKN3mytbCHihwG6lmgF02BXWVva20b508f
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -312,7 +414,7 @@ collection:
         meta:
           id: req_dbb842bb10db4233bc96e22a796c5015
           created: 1772475883294
-          modified: 1772476549511
+          modified: 1773166967198
           isPrivate: false
           description: ""
           sortKey: -1772385258741
@@ -321,7 +423,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-              "name": "Tejtermékektttt",
+              "name": "Tejtermékekttttss",
               "description": "Mindenféle tejtermék"
             }
         headers:
@@ -333,7 +435,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 1|c1T0pslZ4U7Cf6TEgdQIyrlN3ARhzs6YHuyoo6wY05fd75e7
+          token: 2|b2IiJNXl6MNwjLgYJ3yXG5h0zAOiDmgRJ0oK2aTk1897143d
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -442,7 +544,7 @@ collection:
         meta:
           id: req_34ed7244ce864f61876b4aaed9977f95
           created: 1772478007859
-          modified: 1772478175939
+          modified: 1772884936259
           isPrivate: false
           description: ""
           sortKey: -1772478007859
@@ -465,7 +567,7 @@ collection:
             disabled: false
         authentication:
           type: bearer
-          token: 3|OPKWtVXgPBHzthd8gO043t6q6n1GtxNGgTeY52zK46c60213
+          token: 5|I4jUsA6LfNNBb4S3RmF0QP4fZIWIQmKbqqCjGe6He08e04d1
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -479,7 +581,7 @@ collection:
         meta:
           id: req_c4f2d705ea3149f6bf0ab99852abc0b1
           created: 1772478205901
-          modified: 1772478289037
+          modified: 1772885860217
           isPrivate: false
           description: ""
           sortKey: -1772477959998
@@ -488,7 +590,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-              "name": "Gecitelep kftpina.",
+              "name": "nemtom kft.",
               "email": "teszt@beszaldlito.hu",
               "phone": "+36 30 123 4567",
               "address": "Budapest, Fő utca 1."
@@ -555,6 +657,189 @@ collection:
         authentication:
           type: bearer
           token: 3|OPKWtVXgPBHzthd8gO043t6q6n1GtxNGgTeY52zK46c60213
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Admin
+    meta:
+      id: fld_c9c84eb936e4460da3360517c7f6277a
+      created: 1772556266281
+      modified: 1772556266281
+      sortKey: -1772556266281
+      description: ""
+    children:
+      - url: localhost:8000/api/makeadmin/4
+        name: makeadmin
+        meta:
+          id: req_d3b4a8331aea481d88a67abe6b86e736
+          created: 1772556272059
+          modified: 1772884119486
+          isPrivate: false
+          description: ""
+          sortKey: -1772556272059
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 5|I4jUsA6LfNNBb4S3RmF0QP4fZIWIQmKbqqCjGe6He08e04
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/removeadmin/4
+        name: removeadmin
+        meta:
+          id: req_280d5465e7204dd084a04cbb59f2c65e
+          created: 1772556477223
+          modified: 1772556511603
+          isPrivate: false
+          description: ""
+          sortKey: -1772517139959
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 3|UIp3YqCZIsp7aaXZi1lKNEUn3kkD78FdhMjzSasOc2c5bb02
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/deleteuser/4
+        name: deleteuser
+        meta:
+          id: req_63e60e1bd655417e982c50d31e45a3dd
+          created: 1772881999768
+          modified: 1772882067983
+          isPrivate: false
+          description: ""
+          sortKey: -1772881999768
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/users
+        name: getusers
+        meta:
+          id: req_832c981eded94a849aaac68a3c15077e
+          created: 1772882327133
+          modified: 1772884097558
+          isPrivate: false
+          description: ""
+          sortKey: -1772882327133
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 5|I4jUsA6LfNNBb4S3RmF0QP4fZIWIQmKbqqCjGe6He08e04d1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/setpasswordbyadmin/3
+        name: setpasswordbyadmin
+        meta:
+          id: req_f59ce542e3c646ae9c1b7ea468b87fe0
+          created: 1772883279592
+          modified: 1772883496905
+          isPrivate: false
+          description: ""
+          sortKey: -1772536706009
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "password": "Aa123?",
+              "password_confirmation": "Aa123?"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 5|I4jUsA6LfNNBb4S3RmF0QP4fZIWIQmKbqqCjGe6He08e04d1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/api/updateprofilebyadmin/3
+        name: updateprofilebyadmin
+        meta:
+          id: req_fe333d56b1bf48088c5aadca17947816
+          created: 1772883845129
+          modified: 1772885618603
+          isPrivate: false
+          description: ""
+          sortKey: -1772526922984
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "full_name": "Új Teljes Név",
+              "city": "Pécs",
+              "address": "Fő utca 12.",
+              "phone": "+36301112233"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: 2|b2IiJNXl6MNwjLgYJ3yXG5h0zAOiDmgRJ0oK2aTk1897143d
         settings:
           renderRequestBody: true
           encodeUrl: true
